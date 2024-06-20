@@ -2,12 +2,20 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("<h1>Это мой первый проект на Django</h1>")
+    data = {
+        'caption': "CatDjango"
+    }
 
-def data(request):
-    return HttpResponse("<h1>Это вторая страница моего проекта на Django</h1>")
+    return render(request,"main/index.html",data)
 
-def test(request):
-    return HttpResponse("<h1>Это третья  страница моего проекта на Django</h1>")
+def lev(request):
+    return render(request, "main/lev.html")
+
+def down(request):
+    return render(request, "main/down.html")
+
+def new(request):
+    return render(request, "main/new.html")
+
 
 # Create your views here.

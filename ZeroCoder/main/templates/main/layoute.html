@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatDjango</title>
+   # <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   # <!-- Your custom CSS if any -->
+    <link href="{% static 'main/css/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+    <aside class="bg-light p-3">
+        <div class="d-flex flex-column align-items-center">
+            <img src="{% static 'main/img/pngegg.png' %}" alt="Зайчик на двух лапках" width="150px" class="mb-3">
+            <span class="h4">HareDjango</span>
+            <ul class="nav flex-column mt-3">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'home' %}">Главная</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'leverage' %}">Преймущества</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'downside' %}">Недостатки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'page2' %}">Новости</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <main class="container mt-4">
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    #<!-- Optional JavaScript -->
+    #<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+<!--#Этот код добавляет стилизацию с использованием классов Bootstrap для вашего шаблона Django.-->
+<!--Вы можете дополнительно настроить внешний вид, добавив свои стили в файл `styles.css`.-->
+
+</body>
+</html>

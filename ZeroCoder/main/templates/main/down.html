@@ -1,0 +1,21 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+    <title>Третья  страница на django</title>
+{% endblock %}
+
+{% block content%}
+    <!--{% include 'main/nav.html'%}-->
+
+<!--#Конечно! Вот пример текста для первой страницы вашего проекта на Django,-->
+<!--который может служить приветствием и кратким описанием вашего сайта:-->
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Добро пожаловать на сайт {{caption}}!</h1>
+    <p class="lead">Это ваш первый проект на Django. Это сложно, но этому возможно научиться и мы рады видеть вас здесь.</p>
+    <hr class="my-4">
+    <p>HareDjango - это место, где сложно научиться создавать сайты</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Узнать больше</a>
+</div>
+    {% include 'main/footer.html'%}
+{% endblock %}
